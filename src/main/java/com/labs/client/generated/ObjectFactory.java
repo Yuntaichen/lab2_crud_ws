@@ -24,7 +24,13 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _DeleteStudentResponse_QNAME = new QName("http://labs.com/", "deleteStudentResponse");
+    private final static QName _UpdateStudentResponse_QNAME = new QName("http://labs.com/", "updateStudentResponse");
+    private final static QName _UpdateStudent_QNAME = new QName("http://labs.com/", "updateStudent");
+    private final static QName _CreateStudentResponse_QNAME = new QName("http://labs.com/", "createStudentResponse");
     private final static QName _GetStudentsByFields_QNAME = new QName("http://labs.com/", "getStudentsByFields");
+    private final static QName _DeleteStudent_QNAME = new QName("http://labs.com/", "deleteStudent");
+    private final static QName _CreateStudent_QNAME = new QName("http://labs.com/", "createStudent");
     private final static QName _GetStudentsByFieldsResponse_QNAME = new QName("http://labs.com/", "getStudentsByFieldsResponse");
 
     /**
@@ -32,6 +38,54 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link CreateStudentResponse }
+     * 
+     */
+    public CreateStudentResponse createCreateStudentResponse() {
+        return new CreateStudentResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeleteStudentResponse }
+     * 
+     */
+    public DeleteStudentResponse createDeleteStudentResponse() {
+        return new DeleteStudentResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateStudentResponse }
+     * 
+     */
+    public UpdateStudentResponse createUpdateStudentResponse() {
+        return new UpdateStudentResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateStudent }
+     * 
+     */
+    public UpdateStudent createUpdateStudent() {
+        return new UpdateStudent();
+    }
+
+    /**
+     * Create an instance of {@link DeleteStudent }
+     * 
+     */
+    public DeleteStudent createDeleteStudent() {
+        return new DeleteStudent();
+    }
+
+    /**
+     * Create an instance of {@link CreateStudent }
+     * 
+     */
+    public CreateStudent createCreateStudent() {
+        return new CreateStudent();
     }
 
     /**
@@ -59,12 +113,66 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteStudentResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://labs.com/", name = "deleteStudentResponse")
+    public JAXBElement<DeleteStudentResponse> createDeleteStudentResponse(DeleteStudentResponse value) {
+        return new JAXBElement<DeleteStudentResponse>(_DeleteStudentResponse_QNAME, DeleteStudentResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateStudentResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://labs.com/", name = "updateStudentResponse")
+    public JAXBElement<UpdateStudentResponse> createUpdateStudentResponse(UpdateStudentResponse value) {
+        return new JAXBElement<UpdateStudentResponse>(_UpdateStudentResponse_QNAME, UpdateStudentResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateStudent }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://labs.com/", name = "updateStudent")
+    public JAXBElement<UpdateStudent> createUpdateStudent(UpdateStudent value) {
+        return new JAXBElement<UpdateStudent>(_UpdateStudent_QNAME, UpdateStudent.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateStudentResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://labs.com/", name = "createStudentResponse")
+    public JAXBElement<CreateStudentResponse> createCreateStudentResponse(CreateStudentResponse value) {
+        return new JAXBElement<CreateStudentResponse>(_CreateStudentResponse_QNAME, CreateStudentResponse.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetStudentsByFields }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://labs.com/", name = "getStudentsByFields")
     public JAXBElement<GetStudentsByFields> createGetStudentsByFields(GetStudentsByFields value) {
         return new JAXBElement<GetStudentsByFields>(_GetStudentsByFields_QNAME, GetStudentsByFields.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteStudent }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://labs.com/", name = "deleteStudent")
+    public JAXBElement<DeleteStudent> createDeleteStudent(DeleteStudent value) {
+        return new JAXBElement<DeleteStudent>(_DeleteStudent_QNAME, DeleteStudent.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link CreateStudent }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://labs.com/", name = "createStudent")
+    public JAXBElement<CreateStudent> createCreateStudent(CreateStudent value) {
+        return new JAXBElement<CreateStudent>(_CreateStudent_QNAME, CreateStudent.class, null, value);
     }
 
     /**
