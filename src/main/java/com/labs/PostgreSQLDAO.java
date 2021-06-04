@@ -15,7 +15,7 @@ public class PostgreSQLDAO {
         try (Connection connection = ConnectionUtil.getConnection()) {
             Statement stmt = connection.createStatement();
             for (String searchArg : searchArgs) {
-                // TODO: Исправить поиск в сервисе по чистому совпадению с полем, а не только с его частью (+ первая лаб. раб.)
+                // Для поиска по конкретному совпадению с полем из БД можно изменить шаблон в запросе SELECT
                 ResultSet rs = stmt.executeQuery("SELECT t.* FROM students t WHERE (t.*)::text LIKE '%" + searchArg + "%'");
                 while (rs.next()) {
                     String name = rs.getString("name");

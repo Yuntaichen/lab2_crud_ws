@@ -27,6 +27,36 @@ public interface StudentWebService {
 
     /**
      * 
+     * @param studentId
+     * @param studentAge
+     * @param studentSurname
+     * @param studentName
+     * @param studentMark
+     * @param rowId
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "updateStudent", targetNamespace = "http://labs.com/", className = "com.labs.client.generated.UpdateStudent")
+    @ResponseWrapper(localName = "updateStudentResponse", targetNamespace = "http://labs.com/", className = "com.labs.client.generated.UpdateStudentResponse")
+    @Action(input = "http://labs.com/StudentWebService/updateStudentRequest", output = "http://labs.com/StudentWebService/updateStudentResponse")
+    public String updateStudent(
+        @WebParam(name = "rowId", targetNamespace = "")
+        int rowId,
+        @WebParam(name = "studentName", targetNamespace = "")
+        String studentName,
+        @WebParam(name = "studentSurname", targetNamespace = "")
+        String studentSurname,
+        @WebParam(name = "studentAge", targetNamespace = "")
+        int studentAge,
+        @WebParam(name = "studentId", targetNamespace = "")
+        int studentId,
+        @WebParam(name = "studentMark", targetNamespace = "")
+        String studentMark);
+
+    /**
+     * 
      * @param rowId
      * @return
      *     returns java.lang.String
@@ -56,36 +86,6 @@ public interface StudentWebService {
     @ResponseWrapper(localName = "createStudentResponse", targetNamespace = "http://labs.com/", className = "com.labs.client.generated.CreateStudentResponse")
     @Action(input = "http://labs.com/StudentWebService/createStudentRequest", output = "http://labs.com/StudentWebService/createStudentResponse")
     public String createStudent(
-        @WebParam(name = "studentName", targetNamespace = "")
-        String studentName,
-        @WebParam(name = "studentSurname", targetNamespace = "")
-        String studentSurname,
-        @WebParam(name = "studentAge", targetNamespace = "")
-        int studentAge,
-        @WebParam(name = "studentId", targetNamespace = "")
-        int studentId,
-        @WebParam(name = "studentMark", targetNamespace = "")
-        String studentMark);
-
-    /**
-     * 
-     * @param studentId
-     * @param studentAge
-     * @param studentSurname
-     * @param studentName
-     * @param studentMark
-     * @param rowId
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "updateStudent", targetNamespace = "http://labs.com/", className = "com.labs.client.generated.UpdateStudent")
-    @ResponseWrapper(localName = "updateStudentResponse", targetNamespace = "http://labs.com/", className = "com.labs.client.generated.UpdateStudentResponse")
-    @Action(input = "http://labs.com/StudentWebService/updateStudentRequest", output = "http://labs.com/StudentWebService/updateStudentResponse")
-    public String updateStudent(
-        @WebParam(name = "rowId", targetNamespace = "")
-        int rowId,
         @WebParam(name = "studentName", targetNamespace = "")
         String studentName,
         @WebParam(name = "studentSurname", targetNamespace = "")
